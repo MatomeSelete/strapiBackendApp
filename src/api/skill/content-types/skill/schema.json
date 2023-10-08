@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skills",
+  "info": {
+    "singularName": "skill",
+    "pluralName": "skills",
+    "displayName": "skill",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "learner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::review.review",
+      "inversedBy": "skills"
+    },
+    "Skills": {
+      "type": "string",
+      "maxLength": 10,
+      "minLength": 1,
+      "required": true
+    }
+  }
+}
